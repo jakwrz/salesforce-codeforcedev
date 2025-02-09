@@ -1,0 +1,13 @@
+<template>
+<div class="slds-box slds-m around_medium">
+    <h2>Create New Lead</h2>
+    <lightning-input label="First Name" value={leadData.firstName} onchange={handleInputChange} data-field="FirstName"></lightning-input>
+    <lightning-input label="Last Name" value={leadData.lastName} onchange={handleInputChange} data-field="LastName" required></lightning-input>
+    <lightning-input label="Company" value={leadData.company} onchange={handleInputChange} data-field="Company" required></lightning-input>
+    <lightning-input label="Email" value={leadData.email} onchange={handleInputChange} data-field="Email"></lightning-input>
+    <lightning-button label="Create Lead" onclick={createLead}></lightning-button>
+    <template if:true={message}>
+        <p>{message}</p>
+    </template>
+</div>
+</template>

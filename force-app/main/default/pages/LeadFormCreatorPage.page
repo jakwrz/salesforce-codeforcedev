@@ -1,0 +1,17 @@
+<apex:page lightningStyleSheets="true">
+  <div id="lwc-container"></div>
+  <p>Lead Creator</p>
+  <script src="/resource/LightningOut.js"></script>
+  <script>
+    $Lightning.use("c:LWCContainerApp", function() {
+        $Lightning.createComponent(
+            "c:leadFormCreator",
+            {},
+            "lwc-container",
+            function(cmp) {
+                console.log("LWC added to Visualforce page:", cmp);
+            }
+        );
+    });
+  </script>
+</apex:page>
